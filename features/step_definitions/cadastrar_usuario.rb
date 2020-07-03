@@ -4,7 +4,10 @@ Dado('que acesso o cadastro do usuário') do
   @cadastro_page = CadastroPage.new
   @cadastro_page.load
 end
+# Dado('preencho os campos do formulário com {string}, {string}, {string}, {string}, {string}') do |string, string2, string3, string4, string5|  
+#   @cadastro_page.prencher_form_com_dados(string, string2, string3, string4, string5)
 
+# end
 Dado('preencho os campos do formulário com dados válidos') do
   @cadastro_page.prencher_form_com_dados
 end
@@ -61,7 +64,7 @@ Então('o sistema deve exibir a mensagem de email duplicado') do
   expect(find("span[class='form-error']", text: "* Este e-mail já está cadastrado. Informe um outro e-mail ou clique em 'Esqueci a minha senha'.").visible?).to be true
 end
 
-Dado('preencho os campos do formulário com cpf inválido') do |table|
+Dado('preencho os campos do formulário com cpf inválido, é exibito mensagem de erro') do |table|
   @cadastro_page.cmp_cadastrar.click
 
   table.hashes.each do |cpf|

@@ -29,6 +29,24 @@ class CadastroPage < SitePrism::Page
     cmp_ano.click
     rd_termo.set true
   end
+  # def prencher_form_com_dados(a, b, c, d, e)
+  #   cmp_cadastrar.click
+  #   cmp_email.set a
+  #   cmp_nome.set b
+  #   cmp_cpf.set c
+  #   btn_confirmar.click
+  #   cmp_senha.set d
+  #   cmp_confirmar_senha.set e
+  #   cmp_dia.click
+  #   cmp_mes.click
+  #   cmp_ano.click
+  #   if cmp_ano == 'pf'
+  #     rd_termo.set true
+  #   elsif cmp_ano == 'pj'
+  #     rd_termo.set false
+  #   end
+  #   rd_termo.set true
+  # end
   
   def clicar_finalizar
     btn_confirmar.click

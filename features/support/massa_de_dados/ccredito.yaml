@@ -1,0 +1,53 @@
+valido:
+    cc_titular: "Otto Oliveira"
+    cc_numero: "4242 4242 4242 4242"
+    cc_validade: "1122"
+    cc_codigo: "123"
+ano_passado:
+    cc_titular: "Otto Oliveira"
+    cc_numero: "4242 4242 4242 4242"
+    cc_validade: "1111"
+    cc_codigo: "123"
+    mensagem: "* Data inválida."
+validade_vazio:
+    cc_titular: "Otto Oliveira"
+    cc_numero: "4242 4242 4242 4242"
+    cc_validade: ""
+    cc_codigo: "123"
+    mensagem: "* Data inválida."
+mes_inexistente:
+    cc_titular: "Otto Oliveira"
+    cc_numero: "4242 4242 4242 4242"
+    cc_validade: "1422"
+    cc_codigo: "123"
+    mensagem: "* Data inválida."
+mes_com_string:
+    cc_titular: "Otto Oliveira"
+    cc_numero: "4242 4242 4242 4242"
+    cc_validade: "1a22"
+    cc_codigo: "123"
+    mensagem: "* Data inválida."
+ano_vazio:
+    cc_titular: "Otto Oliveira"
+    cc_numero: "4242 4242 4242 4242"
+    cc_validade: "1111"
+    cc_codigo: "123"
+    mensagem: "* Data inválida."
+cvv_vazio:
+    cc_titular: "Otto Oliveira"
+    cc_numero: "4242 4242 4242 4242"
+    cc_validade: "1122"
+    cc_codigo: ""
+    mensagem: "* Data inválida."
+nome_vazio:
+    cc_titular: ""
+    cc_numero: "4242 4242 4242 4242"
+    cc_validade: "1122"
+    cc_codigo: "123"
+    mensagem: "* Data inválida."
+numero_invalido:
+    cc_titular: "Otto Oliveir"
+    cc_numero: "4444 4242 4242 4242"
+    cc_validade: "1122"
+    cc_codigo: "123"
+    mensagem: "* Data inválida."
