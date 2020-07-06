@@ -1,0 +1,20 @@
+conta_bradesco:
+    titular: "Otto Oliveira"
+    agencia: "1234"
+    digito_agencia: "1"
+    conta: "123456789"
+    digito_conta: "1"
+conta_bbrasil:
+    titular: "Otto Oliveira"
+    agencia: "1234"
+    digito_agencia: "1"
+    conta: "123456789"
+    digito_conta: "1"
+conta_itau:
+    titular: "Otto Oliveira"
+    agencia: "1234"
+    digito_agencia: "1"
+    conta: "123456789"
+    digito_conta: "1"
+conta_santander:
+    cpf: "00000002054"

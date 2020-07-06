@@ -10,15 +10,17 @@ Before('@login') do
   find(:css, 'button[type="submit"]').click
 
 end
-# Before('@produto') do
-#   find('div:nth-child(1) > div > div.card-vitrine__bottom > div.card-vitrine__compra > div > div:nth-child(1)').click
-# end
+
 Before do
   @carrinho_page = CarrinhoPage.new
   @doacao_page = DoacaoPage.new
   @home_page = HomePage.new
   @pagamento_page = PagamentoPage.new
 end
+
+# Before do
+#  #limpar dados no banco
+# end
 
 After do
   include Capybara::DSL
