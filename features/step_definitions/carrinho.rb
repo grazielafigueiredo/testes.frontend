@@ -5,7 +5,8 @@ Dado('que acesso a vitrine') do
 end
 
 Dado('seleciono um produto') do
-  @home_page.select_primeiro_produto.click
+  @home_page.select_produto_ja
+  @home_page.click_comprar
 end
 
 Quando('finalizo o carrinho') do
@@ -17,20 +18,25 @@ Então('valido que existe apenas um produto no carrinho') do
 end
 
 Dado('seleciono dois produto') do
-  @home_page.select_primeiro_produto.click
-  @home_page.select_segundo_produto.click
+  @home_page.select_produto_ja
+  @home_page.click_comprar
+  sleep 2
+  @home_page.select_produto_max
+  @home_page.click_comprar
 end
 
 Então('valido que existem dois produtos no carrinho') do
   expect(assert_selector('div[class="carrinho__item"]', count: 2))
 end
 
-Dado('seleciono vários produto') do
-  @home_page.select_primeiro_produto.click
-  @home_page.select_segundo_produto.click
-  @home_page.select_terceiro_produto.click
+Dado('seleciono um produto max ou já e um signos') do
+  @home_page.select_produto_ja
+  @home_page.click_comprar
+  sleep 2
+  @home_page.select_produto_signos
+  @home_page.click_comprar
 end
 
-Então('valido que existem vários produtos no carrinho') do
-  expect(assert_selector('div[class="carrinho__item"]', count: 3))
+Então('no carrinho deve conter apenas o produto signos') do
+  expect(assert_selector('div[class="carrinho__item"]', count: 1))
 end

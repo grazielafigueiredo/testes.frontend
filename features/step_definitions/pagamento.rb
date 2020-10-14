@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 Dado('tenho um produto no carrinho') do
-  @home_page.select_primeiro_produto.click
+  @home_page.select_produto_ja
+  @home_page.click_comprar
   sleep 2
-  @home_page.select_segundo_produto.click
   @home_page.finalizar_carrinho
 end
 

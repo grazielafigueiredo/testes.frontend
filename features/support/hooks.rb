@@ -16,6 +16,7 @@ Before do
   @doacao_page = DoacaoPage.new
   @home_page = HomePage.new
   @pagamento_page = PagamentoPage.new
+  @signos_page = SignosPage.new
 end
 
 # Before do

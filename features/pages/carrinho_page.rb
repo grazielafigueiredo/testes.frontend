@@ -39,10 +39,6 @@ class CarrinhoPage < SitePrism::Page
     a.click
   end
 
-  def title_boleto
-    title_boleto.text
-  end
-
   def gerar_boleto
     btn_gerar_boleto.click
   end
@@ -84,6 +80,6 @@ class CarrinhoPage < SitePrism::Page
   end
 
   def quantidades_titulos(quantidade_titulos)
-    find('#qtdSelect > option:nth-child(' + quantidade_titulos + ')').click # Escolher quantidade de títulos
+    find('#qtdSelect > option:nth-child(' + quantidade_titulos + ')').click # Escolher quantidade de titulos
   end
 end
