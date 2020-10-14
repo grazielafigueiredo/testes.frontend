@@ -6,9 +6,12 @@ Funcionalidade: Realizar pagamento
     Quero pagar o carrinho
     Para adquirir um título de capitalização
 
+Contexto: 
+    Dado tenho um produto no carrinho
+
+
     @pagamento_boleto
     Cenário: Fazer pagamento via boleto bancário
-        Dado tenho um produto no carrinho
         Quando seleciono a opção 'Boleto Bancário' para pagamento
         E click em 'Pagar com boleto'
         Então sou direcionado para tela de recebimento do pedido
@@ -17,7 +20,6 @@ Funcionalidade: Realizar pagamento
 
     @pagamento_cartao_credito
     Esquema do Cenário: Fazer pagamento via Cartão de crédito
-        Dado tenho um produto no carrinho
         Quando seleciono a opção 'Cartão de crédito' para pagamento
         E preencho os dados do <cartao>
         E click em 'Pagar com cartão de crédito'
@@ -29,7 +31,6 @@ Funcionalidade: Realizar pagamento
 
     @pagamento_cartao_invalido
     Esquema do Cenário: Fazer pagamento via Cartão de crédito
-        Dado tenho um produto no carrinho
         Quando seleciono a opção 'Cartão de crédito' para pagamento
         E preencho os dados do <cartao>
         E click em 'Pagar com cartão de crédito'
@@ -49,14 +50,12 @@ Funcionalidade: Realizar pagamento
 
     @pagamento_credito_lottocap
     Cenário: Fazer pagamento via créditos
-        Dado tenho um produto no carrinho
         Quando seleciono a opção 'Créditos Lottocap' para pagamento
         E click em 'Pagar com créditos LottoCap'
         Então sou direcionado para tela de recebimento do pedido
 
     @pagamento_transferencia
     Esquema do Cenário: Fazer pagamento via transferencia bancária
-        Dado tenho um produto no carrinho
         Quando seleciono a opção 'Transferência bancária' para pagamento
         E seleciono o <banco> preenchendo os dados da <conta> 
         E click em 'Pagar via transferência'

@@ -5,10 +5,10 @@ Funcionalidade: Pagamento desabilitado para valores inferiores ou sem créditos
     Como um usuário do site Lottocap
     Quero que os pagamentos sejam bloqueados dados os valores mínimos para pagamento
 
-    # cartao de credito =  4 reais a menos, deve bloquear pagamento
-    # transferencia =  4 reais a menos, deve bloquear pagamento
-    # boleto  =  19 reais a menos, deve bloquear pagamento
-    # crédito  =  se nao tiver créditos, deve bloquear pagamento
+    # No carrinho deve ter um valor mínimo para liberar as modalidades de pagamento
+    # cartao de credito e transferencia dever ter o valor de R$ 5 para ser liberado;
+    # para boleto o valor  mínimo é de R$ 20,00 reais; e 
+    # créditos não tem valor mínimo, basta que o usuário tenha créditos em conta
 
     @desabilitado_boleto
     Esquema do Cenário: Fazer pagamento via Cartão de crédito
@@ -18,6 +18,6 @@ Funcionalidade: Pagamento desabilitado para valores inferiores ou sem créditos
 
         Exemplos:
             | quantidade_titulos | forma_pagamento_desabilitada                                 |
-            |         "4"        | "Cartão de crédito,Boleto Bancário,Transferência bancária"   |
+            |         "1"        | "Cartão de crédito,Boleto Bancário,Transferência bancária"   |
             |         "5"        | "Boleto Bancário"                                            |
             |         "19"       | "Boleto Bancário"                                            |

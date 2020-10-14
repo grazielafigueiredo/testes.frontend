@@ -9,7 +9,7 @@ Para comprar um titulo de capitalização
 Contexto: 
     Dado que acesso a vitrine
 
-@add_produto_carrinho
+@add_um_produto_carrinho
 Cenário: Adicionar apenas um produto ao carrinho
     E seleciono um produto
     Quando finalizo o carrinho
@@ -21,8 +21,8 @@ Cenário: Adicionar dois produtos ao carrinho
     Quando finalizo o carrinho
     Então valido que existem dois produtos no carrinho
 
-@add_varios_produtos_carrinho
-Cenário: Adicionar vários produtos ao carrinho
-    E seleciono vários produto
+@add
+Cenário: Adicionar produto signos no carrinho
+    E seleciono um produto max ou já e um signos
     Quando finalizo o carrinho
-    Então valido que existem vários produtos no carrinho
+    Então no carrinho deve conter apenas o produto signos
